@@ -25,7 +25,9 @@ do {
     do {
         var command = prompt("Command?(Right,Left,Back)", "");
     } while (!(set_Commands.has(command)));
-    curent_direction = Direction[(Direction[curent_direction] + Commands[command]) % 4];
-    alert('Direction on ' + curent_direction);
-    repeat = confirm("Change direction?");
+    
+     curent_direction = Direction[(Direction[curent_direction] + Commands[command]) % 4];
+     alert('Direction on ' + curent_direction);
+     repeat = confirm("Change direction?");
+    
 } while (repeat);
