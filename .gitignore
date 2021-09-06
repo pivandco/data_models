@@ -3,3 +3,5 @@
 obj/
 bin/
 node_modules/
+.DS_Store
+a.out
