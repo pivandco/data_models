@@ -19,8 +19,8 @@ enum class Command {
 char get_char_from_whitelist(const string &whitelist) {
     int in_char;
     do {
-        in_char = getchar();
-    } while (whitelist.find(tolower(in_char)) == string::npos);
+        in_char = tolower(getchar());
+    } while (whitelist.find(in_char) == string::npos);
     return in_char;
 }
 
