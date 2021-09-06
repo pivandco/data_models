@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ShipWPF"
         mc:Ignorable="d"
-        Title="MainWindow" Height="186" Width="300" ResizeMode="NoResize">
+        Title="Задача на корабль" Height="186" Width="300" ResizeMode="NoResize">
     <Grid>
         <Button x:Name="btn_north" Content="Север" HorizontalAlignment="Left" Margin="17,57,0,0" VerticalAlignment="Top" Click="North_Click"/>
         <Rectangle x:Name="rectangle" HorizontalAlignment="Left" Height="32" Margin="0,0,0,0" Stroke="Black" VerticalAlignment="Top" Fill="Black" Width="10000"/>
