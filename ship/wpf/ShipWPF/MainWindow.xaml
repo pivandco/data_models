@@ -19,7 +19,7 @@
         <Button x:Name="btnLeft" Content="Налево" HorizontalAlignment="Left" Margin="17,106,0,0" VerticalAlignment="Top" Click="LeftClick" FontSize="14" />
         <Button x:Name="btnRight" Content="Направо" HorizontalAlignment="Left" Margin="73,107,0,0" VerticalAlignment="Top" Click="RightClick" FontSize="14"/>
         <Button x:Name="btnBack" Content="Назад" HorizontalAlignment="Left" Margin="138,107,0,0" VerticalAlignment="Top" Click="BackClick" FontSize="14" Grid.ColumnSpan="2"/>
-        <Label x:Name="finalLabel" Content="Текущий курс крпабля:" HorizontalAlignment="Left" Margin="11,134,0,0" VerticalAlignment="Top" FontSize="14"/>
+        <Label x:Name="finalLabel" Content="Текущий курс корабля:" HorizontalAlignment="Left" Margin="11,134,0,0" VerticalAlignment="Top" FontSize="14"/>
 
     </Grid>
 </Window>
