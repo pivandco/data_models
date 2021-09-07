@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>repl.it</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    <h1 align="center" >Ship task</h1>
+  </head>
+  <body>
+    <form action="" id="start_form">
+      <p>Введите изначальное направление и нажмите кнопку &laquo;Ввести&raquo;</p>
+   <p><input type="text" id="email"> <span id="status"></span></p>
+   <p><input type="button" value="Ввести" onclick="set_start_direction()"></p>
+    </form>
+    <div class="vis" id="compas_form">
+      <p>Текущее направление:<p>
+      <p id="direction_outpat"></p>
+      <p ><br>
+      <input type="button" value="Left" onclick="change_direction(this.value)">
+      <input type="button" value="Back" onclick="change_direction(this.value)"> 
+      <input type="button" value="Right" onclick="change_direction(this.value)"> </p>
+      
+
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
