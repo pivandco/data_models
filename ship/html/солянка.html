@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <style>
+        .vis {
+            display: none;
+        }
+    </style>
+    <h1 align="center">Ship task</h1>
+    <script type="text/javascript">
+        "use strict";
+        var Direction;
+        (function (Direction) {
+            Direction[Direction["north"] = 0] = "north";
+            Direction[Direction["east"] = 1] = "east";
+            Direction[Direction["south"] = 2] = "south";
+            Direction[Direction["west"] = 3] = "west";
+        })(Direction || (Direction = {}));
+
+        var Commands;
+        (function (Commands) {
+            Commands[Commands["Right"] = 1] = "Right";
+            Commands[Commands["Back"] = 2] = "Back";
+            Commands[Commands["Left"] = 3] = "Left";
+        })(Commands || (Commands = {}));
+
+
+        function set_start_direction() {
+            var direction = document.getElementById("email").value.toLowerCase();
+            var span_status = document.getElementById("status");
+            if (Direction[direction] !== undefined) {
+                document.getElementById("start_form").style.display = 'none';
+                document.getElementById("compas_form").style.display = 'contents';
+                document.getElementById("direction_outpat").innerHTML = direction;
+            }
+            else span_status.innerHTML = "Направление не корректно";
+        }
+        function change_direction(command) {
+            var old_direction = document.getElementById("direction_outpat").innerHTML.toLowerCase();
+            var new_direction = Direction[(Direction[old_direction] + Commands[command]) % 4];
+            document.getElementById("direction_outpat").innerHTML = new_direction;
+        }
+    </script>
+</head>
+
+<body>
+    <form action="" id="start_form">
+        <p>Введите изначальное направление и нажмите кнопку &laquo;Ввести&raquo;</p>
+        <p><input type="text" id="email"> <span id="status"></span></p>
+        <p><input type="button" value="Ввести" onclick="set_start_direction()"></p>
+    </form>
+    <div class="vis" id="compas_form">
+        <p>Текущее направление:
+        <p>
+        <p id="direction_outpat"></p>
+        <p><br>
+            <input type="button" value="Left" onclick="change_direction(this.value)">
+            <input type="button" value="Back" onclick="change_direction(this.value)">
+            <input type="button" value="Right" onclick="change_direction(this.value)">
+        </p>
+
+
+    </div>
+</body>
+
+</html>
