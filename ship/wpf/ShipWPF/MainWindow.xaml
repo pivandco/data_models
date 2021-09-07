@@ -5,20 +5,21 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ShipWPF"
         mc:Ignorable="d"
-        Title="Задача на корабль" Height="186" Width="300" ResizeMode="NoResize">
+        Title="Задача" Height="214" Width="284" ResizeMode="NoResize" Icon="/logo.png">
     <Grid>
-        <Button x:Name="btn_north" Content="Север" HorizontalAlignment="Left" Margin="17,57,0,0" VerticalAlignment="Top" Click="North_Click"/>
-        <Rectangle x:Name="rectangle" HorizontalAlignment="Left" Height="32" Margin="0,0,0,0" Stroke="Black" VerticalAlignment="Top" Fill="Black" Width="10000"/>
-        <Label Content="Задача на корабль&#xD;&#xA;" HorizontalAlignment="Right" Margin="0,3,10,0" VerticalAlignment="Top" Foreground="White"/>
-        <Label x:Name="command" Content="Команда" HorizontalAlignment="Left" Margin="10,72,0,0" VerticalAlignment="Top"/>
-        <Label Content="Выберите направление корабля" HorizontalAlignment="Left" Margin="10,32,0,0" VerticalAlignment="Top"/>
-        <Button x:Name="btn_east" Content="Восток" HorizontalAlignment="Left" Margin="59,57,0,0" VerticalAlignment="Top" Click="East_Click" />
-        <Button x:Name="btn_south" Content="Юг" HorizontalAlignment="Left" Margin="105,57,0,0" VerticalAlignment="Top" Click="South_Click" />
-        <Button x:Name="btn_west" Content="Запад" HorizontalAlignment="Left" Margin="131,57,0,0" VerticalAlignment="Top" Click="West_Click" />
-        <Button x:Name="btn_left" Content="Налево" HorizontalAlignment="Left" Margin="17,95,0,0" VerticalAlignment="Top" Click="Left_Click" />
-        <Button x:Name="btn_right" Content="Направо" HorizontalAlignment="Left" Margin="67,95,0,0" VerticalAlignment="Top" Click="Right_Click"/>
-        <Button x:Name="btn_back" Content="Назад" HorizontalAlignment="Left" Margin="124,95,0,0" VerticalAlignment="Top" Click="Back_Click"/>
-        <Label x:Name="final_label" Content="Текущий курс:" HorizontalAlignment="Left" Margin="10,111,0,0" VerticalAlignment="Top"/>
+        
+        <Rectangle x:Name="rectangle" HorizontalAlignment="Left" Height="32" Margin="0,0,0,0" Stroke="Black" VerticalAlignment="Top" Fill="Black" Width="10000" Grid.ColumnSpan="2"/>
+        <Label Content="Корабль" Margin="10,2,0,0" VerticalAlignment="Top" Foreground="White" FontSize="14" Grid.ColumnSpan="2"/>
+        <Label x:Name="command" Content="Команда" HorizontalAlignment="Left" Margin="10,80,0,0" VerticalAlignment="Top" FontSize="14"/>
+        <Label Content="Выберите направление корабля" HorizontalAlignment="Left" Margin="10,32,0,0" VerticalAlignment="Top" FontSize="14" Grid.ColumnSpan="2"/>
+        <Button x:Name="btnNorth" Content="Север" HorizontalAlignment="Left" Margin="17,57,0,0" VerticalAlignment="Top" Click="NorthClick" FontSize="14"/>
+        <Button x:Name="btnEast" Content="Восток" HorizontalAlignment="Left" Margin="65,57,0,0" VerticalAlignment="Top" Click="EastClick" FontSize="14" />
+        <Button x:Name="btnSouth" Content="Юг" HorizontalAlignment="Left" Margin="118,57,0,0" VerticalAlignment="Top" Click="SouthClick" FontSize="14" />
+        <Button x:Name="btnWest" Content="Запад" HorizontalAlignment="Left" Margin="147,57,0,0" VerticalAlignment="Top" Click="WestClick" FontSize="14" Grid.ColumnSpan="2" />
+        <Button x:Name="btnLeft" Content="Налево" HorizontalAlignment="Left" Margin="17,106,0,0" VerticalAlignment="Top" Click="LeftClick" FontSize="14" />
+        <Button x:Name="btnRight" Content="Направо" HorizontalAlignment="Left" Margin="73,107,0,0" VerticalAlignment="Top" Click="RightClick" FontSize="14"/>
+        <Button x:Name="btnBack" Content="Назад" HorizontalAlignment="Left" Margin="138,107,0,0" VerticalAlignment="Top" Click="BackClick" FontSize="14" Grid.ColumnSpan="2"/>
+        <Label x:Name="finalLabel" Content="Текущий курс крпабля:" HorizontalAlignment="Left" Margin="11,134,0,0" VerticalAlignment="Top" FontSize="14"/>
 
     </Grid>
 </Window>

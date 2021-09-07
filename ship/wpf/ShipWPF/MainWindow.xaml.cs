@@ -1,26 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
+﻿using System.Windows;
 
 namespace ShipWPF
 {
-    /// <summary>
-    /// Interaction logic for MainWindow.xaml
-    /// </summary>
-    /// 
-
-    enum Direction
+    internal enum Direction
     {
         North,
         East,
@@ -28,7 +10,7 @@ namespace ShipWPF
         West
     }
 
-    enum Command
+    internal enum Command
     {
         Right = 1,
         Back,
@@ -37,12 +19,11 @@ namespace ShipWPF
 
     public partial class MainWindow : Window
     {
-        
-        Direction direction;
+        private Direction direction;
 
         public MainWindow()
         {
-            
+
             InitializeComponent();
             LabelChange(Direction.North);
         }
@@ -56,10 +37,10 @@ namespace ShipWPF
                 Direction.East => "Восток",
                 Direction.South => "Юг",
                 Direction.West => "Запад",
-                _ => "А как?"
+                _ => "?"
             };
-            
-            final_label.Content = $"Текущий курс корабля: {russian_label}";
+
+            finalLabel.Content = $"Текущий курс корабля: {russian_label}";
         }
 
         private Direction ChangeCourse(int a)
@@ -67,37 +48,37 @@ namespace ShipWPF
             return (Direction)((int)(direction + a) % 4);
         }
 
-        private void North_Click(object sender, RoutedEventArgs e)
+        private void NorthClick(object sender, RoutedEventArgs e)
         {
             LabelChange(Direction.North);
         }
 
-        private void East_Click(object sender, RoutedEventArgs e)
+        private void EastClick(object sender, RoutedEventArgs e)
         {
             LabelChange(Direction.East);
         }
 
-        private void South_Click(object sender, RoutedEventArgs e)
+        private void SouthClick(object sender, RoutedEventArgs e)
         {
             LabelChange(Direction.South);
         }
 
-        private void West_Click(object sender, RoutedEventArgs e)
+        private void WestClick(object sender, RoutedEventArgs e)
         {
             LabelChange(Direction.West);
         }
 
-        private void Left_Click(object sender, RoutedEventArgs e)
+        private void LeftClick(object sender, RoutedEventArgs e)
         {
             LabelChange(ChangeCourse((int)Command.Left));
         }
 
-        private void Right_Click(object sender, RoutedEventArgs e)
+        private void RightClick(object sender, RoutedEventArgs e)
         {
             LabelChange(ChangeCourse((int)Command.Right));
         }
 
-        private void Back_Click(object sender, RoutedEventArgs e)
+        private void BackClick(object sender, RoutedEventArgs e)
         {
             LabelChange(ChangeCourse((int)Command.Back));
         }
