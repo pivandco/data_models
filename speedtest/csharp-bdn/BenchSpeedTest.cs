@@ -11,7 +11,7 @@ namespace SPEEDTEST
             int[] a = { 0, 1, 2, 3, 4, 5, 6, 7, 8, 9 };
             int x = 5, i = 0;
 
-            while (i < a.Length - 1 && a[i] != x)
+            while (i < a.Length && a[i] != x)
             {
                 i++;
             }
