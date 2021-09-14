@@ -18,8 +18,8 @@ AMD Ryzen 5 3600, 1 CPU, 12 logical and 6 physical cores
 |  BinarySearch | 5.704 ns | 0.1506 ns | 0.4442 ns | 5.847 ns |
 
 ## Legends 
-  Mean   : Arithmetic mean of all measurements
-  Error  : Half of 99.9% confidence interval
-  StdDev : Standard deviation of all measurements
-  Median : Value separating the higher half of all measurements (50th percentile)
-  1 ns   : 1 Nanosecond (0.000000001 sec)
+  **Mean**   : Arithmetic mean of all measurements  
+  **Error**  : Half of 99.9% confidence interval  
+  **StdDev** : Standard deviation of all measurements  
+  **Median** : Value separating the higher half of all measurements (50th percentile)  
+  **1 ns**   : 1 Nanosecond (0.000000001 sec)
