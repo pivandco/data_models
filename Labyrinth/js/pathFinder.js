@@ -1,5 +1,3 @@
-const cell1=[0,0];
-const cell2=[ROWS-1,COLUMNS-1]
 function pathFinder() {
     let copyField = findPath();
     console.log(copyField);
@@ -38,7 +36,9 @@ function pathFinder() {
 }
 
 function findPath() {
-    let copyField = field.slice();
+    let copyField = field.map(function(arr) {
+    return arr.slice();
+});
     copyField[0][0] = 0;
     while (copyField[ROWS - 1][COLUMNS - 1] === true) {
         //efficiently?
