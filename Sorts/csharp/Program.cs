@@ -7,7 +7,7 @@ namespace SortArrays
 {
     public class Sorts
     {
-        [Benchmark]
+        [Benchmark(Description = "Вставками")]
         public int InsertSort()
         {
 
@@ -25,7 +25,7 @@ namespace SortArrays
             return arr[0];
         }
 
-        [Benchmark]
+        [Benchmark(Description = "Выбором")]
         public int SelectionSort()
         {
             int[] arr = { 10, 15, 12, 3, 9, 99, -5, 7, 4, 12 };
@@ -48,7 +48,7 @@ namespace SortArrays
             return arr[0];
         }
 
-        [Benchmark]
+        [Benchmark(Description = "Обменом")]
         public int BubbleSort()
         {
             int[] arr = { 10, 15, 12, 3, 9, 99, -5, 7, 4, 12 };
@@ -66,7 +66,7 @@ namespace SortArrays
             return arr[0];
         }
 
-        [Benchmark]
+        [Benchmark(Description = "Шейкера")]
         public int ShakerSort()
         {
             int[] arr = { 10, 15, 12, 3, 9, 99, -5, 7, 4, 12 };
@@ -96,7 +96,7 @@ namespace SortArrays
 
             return arr[0];
         }
-        [Benchmark]
+        [Benchmark(Description = "Шелла")]
         public int ShellSort()
         {
             int[] arr = { 10, 15, 12, 3, 9, 99, -5, 7, 4, 12 };
@@ -117,7 +117,7 @@ namespace SortArrays
             }
             return arr[0];
         }
-        [Benchmark]
+        [Benchmark(Description = "Пирамидальная")]
         public int HeapSort()
         {
             int[] arr = { 10, 15, 12, 3, 9, 99, -5, 7, 4, 12 };
@@ -135,7 +135,7 @@ namespace SortArrays
             return arr[0];
         }
 
-        [Benchmark]
+        [Benchmark(Description = "Быстрая")]
         [ArgumentsSource(nameof(Array))]
         public int[] QuickSort(int[] arr, int minIndex = 0, int maxIndex = 9)
         {
